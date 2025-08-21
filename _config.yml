@@ -1,12 +1,11 @@
 # Site settings
 title: Technically Shaun
-email: contact@technicallyshaun.com
+email: me@technicallyshaun.com
 description: >-
   A blog about technology, programming, and software development.
   Sharing insights, tutorials, and thoughts on the latest in tech.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://technicallyshaun.com" # the base hostname & protocol for your site
-twitter_username: technicallyshaun
 github_username:  technicallyshaun
 
 # Build settings
@@ -26,15 +25,14 @@ minima:
   date_format: "%B %-d, %Y"
   social_links:
     - { platform: github,  user_url: "https://github.com/technicallyshaun" }
-    - { platform: twitter, user_url: "https://twitter.com/technicallyshaun" }
+    - { platform: youtube, user_url: "https://www.youtube.com/@TechnicallyShaun" }
 
 # SEO settings
 author:
   name: Shaun Smith
-  twitter: technicallyshaun
 
 # Google Analytics (uncomment and add your tracking ID when ready)
-# google_analytics: UA-XXXXXXXXX-X
+google_analytics: G-DHQKSG0WCF
 
 # Disqus Comments (uncomment and add your shortname when ready)
 # disqus:

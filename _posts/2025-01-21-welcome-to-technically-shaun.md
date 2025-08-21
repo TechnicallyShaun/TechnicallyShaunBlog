@@ -35,30 +35,36 @@ I plan to cover a wide range of topics, including:
 
 ## Code Examples
 
-Here's a quick example of the kind of content you can expect. Let's say you want to create a simple HTTP server in Python:
+Here's a quick example of the kind of content you can expect. Let's say you want to create a simple HTTP API in C#:
 
-```python
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import os
+```csharp
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text.Json;
 
-class CustomHandler(SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == '/api/hello':
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            self.wfile.write(b'{"message": "Hello from Technically Shaun!"}')
-        else:
-            super().do_GET()
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
 
-def run_server(port=8000):
-    server_address = ('', port)
-    httpd = HTTPServer(server_address, CustomHandler)
-    print(f"Server running on http://localhost:{port}")
-    httpd.serve_forever()
+app.MapGet("/", () => "Welcome to Technically Shaun!");
 
-if __name__ == '__main__':
-    run_server()
+app.MapGet("/api/hello", () => 
+{
+    var response = new { 
+        message = "Hello from Technically Shaun!",
+        timestamp = DateTime.UtcNow
+    };
+    return Results.Json(response);
+});
+
+app.MapPost("/api/echo", async (HttpContext context) =>
+{
+    using var reader = new StreamReader(context.Request.Body);
+    var body = await reader.ReadToEndAsync();
+    return Results.Ok(new { echo = body });
+});
+
+app.Run();
 ```
 
 ## What's Next?
@@ -74,7 +80,6 @@ In the coming weeks, I'll be publishing articles on:
 I believe the best learning happens through discussion and collaboration. Feel free to:
 
 - Leave comments on posts with your thoughts or questions
-- Follow me on [Twitter](https://twitter.com/technicallyshaun) for quick tips and updates
 - Check out my code on [GitHub](https://github.com/technicallyshaun)
 
 ## Final Thoughts
@@ -85,4 +90,4 @@ Happy coding, and welcome to Technically Shaun!
 
 ---
 
-*Have a topic you'd like me to cover? Drop me a line at contact@technicallyshaun.com*
+*Have a topic you'd like me to cover? Drop me a line at me@technicallyshaun.com*

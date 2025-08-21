@@ -1,0 +1,90 @@
+# Site settings
+title: Technically Shaun
+email: contact@technicallyshaun.com
+description: >-
+  A blog about technology, programming, and software development.
+  Sharing insights, tutorials, and thoughts on the latest in tech.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://technicallyshaun.com" # the base hostname & protocol for your site
+twitter_username: technicallyshaun
+github_username:  technicallyshaun
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Minima theme settings
+minima:
+  date_format: "%B %-d, %Y"
+  social_links:
+    - { platform: github,  user_url: "https://github.com/technicallyshaun" }
+    - { platform: twitter, user_url: "https://twitter.com/technicallyshaun" }
+
+# SEO settings
+author:
+  name: Shaun Smith
+  twitter: technicallyshaun
+
+# Google Analytics (uncomment and add your tracking ID when ready)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Disqus Comments (uncomment and add your shortname when ready)
+# disqus:
+#   shortname: technicallyshaun
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - CNAME
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      share: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

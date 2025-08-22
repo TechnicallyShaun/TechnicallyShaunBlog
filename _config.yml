@@ -1,9 +1,9 @@
 # Site settings
 title: Technically Shaun
-email: me@technicallyshaun.com
+email: contact@technicallyshaun.com
 description: >-
-  A blog about technology, programming, and software development.
-  Sharing insights, tutorials, and thoughts on the latest in tech.
+  Real implementations of MCP, Claude API, and AI automation. 
+  Building autonomous personal assistants that actually work in production.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://technicallyshaun.com" # the base hostname & protocol for your site
 github_username:  technicallyshaun
@@ -71,6 +71,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+  tutorials:
+    output: true
+    permalink: /tutorials/:name/
 
 # Defaults
 defaults:

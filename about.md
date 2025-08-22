@@ -4,27 +4,31 @@ title: About
 permalink: /about/
 ---
 
-# About Technically Shaun
+# About
 
-Welcome to my corner of the internet! I'm Shaun Smith, a software developer passionate about building elegant solutions to complex problems.
+I'm Shaun, a developer who's been writing code for many years. Recently, I discovered that with AI and MCP (Model Context Protocol), technology has finally reached the point where we can build genuinely autonomous personal assistants.
 
-## Who Am I?
+## The Mission
 
-I'm a full-stack developer with a love for clean code, efficient systems, and continuous learning. My journey in tech has taken me through various domains:
+I'm on a mission to over-engineer and automate all the things. Why? Because I want to improve my lifestyle and save time for what actually matters. Along the way, I'm documenting what works, what doesn't, and the interesting discoveries in between.
 
-- **Web Development**: Building responsive, user-friendly applications
-- **Backend Systems**: Designing scalable APIs and microservices
-- **DevOps**: Automating deployments and maintaining infrastructure
-- **Data Engineering**: Processing and analyzing large datasets
+## What You'll Find Here
 
-## My Philosophy
+- **MCP Implementations**: Practical guides for connecting AI to your existing systems
+- **Automation Patterns**: Real solutions that save real time
+- **Production Code**: Everything I share is battle-tested in actual use
+- **Learning in Public**: Including the failures and debugging sessions
 
-I believe in:
+## Current Focus Areas
 
-- **Code as Craft**: Writing code that's not just functional, but maintainable and elegant
-- **Continuous Learning**: Technology evolves rapidly, and so should we
-- **Knowledge Sharing**: The tech community thrives when we help each other grow
-- **Practical Solutions**: Theory is important, but real-world application is key
+- Building comprehensive MCP servers in C#
+- Creating autonomous workflows with Claude API
+- Deploying AI systems with Docker
+- Automating daily tasks that shouldn't require human intervention
+
+## The Approach
+
+Every tutorial and post comes from actual projects. I build first, then extract the learnings. No toy examples or hello-world demos – just real implementations solving real problems.
 
 ## Technical Stack
 
@@ -96,67 +100,10 @@ I believe in:
   </div>
 </div>
 
-## Why This Blog?
 
-After years of:
-- Solving interesting problems
-- Learning from amazing colleagues
-- Making mistakes and learning from them
-- Discovering elegant solutions
+## Connect
 
-I realized I had accumulated knowledge worth sharing. This blog is my way of:
+- GitHub: [github.com/technicallyshaun](https://github.com/technicallyshaun)
+- Email: [Get in touch](mailto:contact@technicallyshaun.com)
 
-1. **Documenting** solutions to problems I've encountered
-2. **Teaching** concepts I wish I'd understood earlier
-3. **Exploring** new technologies and sharing the journey
-4. **Connecting** with fellow developers and learners
-
-## What to Expect
-
-On this blog, you'll find:
-
-- **Tutorials**: Step-by-step guides for various technologies
-- **Deep Dives**: Exploring concepts in detail
-- **Quick Tips**: Short, actionable advice
-- **Project Walkthroughs**: Building real applications from scratch
-- **Tech Reviews**: Honest opinions on tools and frameworks
-- **Career Insights**: Lessons learned from my journey in tech
-
-## Beyond Code
-
-When I'm not coding, you might find me:
-
-- Reading science fiction and technical books
-- Contributing to open-source projects
-- Mentoring junior developers
-- Exploring new coffee shops (caffeine is a developer's best friend!)
-- Hiking and enjoying the outdoors
-
-## Let's Connect!
-
-I love connecting with fellow developers and tech enthusiasts. You can find me on:
-
-- **GitHub**: [@technicallyshaun](https://github.com/technicallyshaun)
-- **Twitter**: [@technicallyshaun](https://twitter.com/technicallyshaun)
-- **Email**: contact@technicallyshaun.com
-
-Feel free to reach out if you:
-- Have questions about any of my posts
-- Want to collaborate on a project
-- Need help with a technical challenge
-- Just want to chat about tech
-
-## Support the Blog
-
-If you find my content helpful, consider:
-
-- Sharing posts with others who might benefit
-- Leaving comments with your thoughts and experiences
-- Suggesting topics you'd like to see covered
-- Contributing to discussions in the comments
-
-Thank you for visiting Technically Shaun. Let's learn and grow together!
-
----
-
-*"The best way to predict the future is to invent it." - Alan Kay*
+Want to follow along? Subscribe to the [RSS feed](/feed.xml) or check back weekly for new posts.

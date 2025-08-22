@@ -1,0 +1,56 @@
+---
+layout: default
+title: Tutorials
+permalink: /tutorials/
+---
+
+<div class="tutorials-page">
+  <header class="page-header">
+    <h1>Tutorials</h1>
+    <p class="page-description">Step-by-step guides for building real autonomous systems with MCP, Claude API, and modern AI tools.</p>
+  </header>
+  
+  <section class="tutorials-intro">
+    <p>Each tutorial comes from actual production implementations. No toy examples – just battle-tested code and patterns you can use today.</p>
+  </section>
+  
+  {% if site.tutorials.size > 0 %}
+  <div class="tutorials-list">
+    {% for tutorial in site.tutorials %}
+    <article class="tutorial-card">
+      <h2><a href="{{ tutorial.url | relative_url }}">{{ tutorial.title }}</a></h2>
+      {% if tutorial.difficulty %}
+      <span class="difficulty difficulty-{{ tutorial.difficulty }}">{{ tutorial.difficulty | capitalize }}</span>
+      {% endif %}
+      <p>{{ tutorial.description }}</p>
+      <div class="tutorial-meta">
+        {% if tutorial.technologies %}
+        <div class="technologies">
+          {% for tech in tutorial.technologies %}
+          <span class="tech-tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if tutorial.reading_time %}
+        <span class="reading-time">{{ tutorial.reading_time }} min read</span>
+        {% endif %}
+      </div>
+      <a href="{{ tutorial.url | relative_url }}" class="start-tutorial">Start Tutorial →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="coming-soon">
+    <h2>Coming Soon</h2>
+    <p>I'm currently preparing comprehensive tutorials on:</p>
+    <ul>
+      <li>Building your first MCP server in C#</li>
+      <li>Connecting Claude to your database</li>
+      <li>Creating autonomous task management systems</li>
+      <li>Deploying MCP servers with Docker</li>
+      <li>Building Obsidian integrations with MCP</li>
+    </ul>
+    <p>Check back next week or <a href="/feed.xml">subscribe to RSS</a> to get notified when new tutorials are published.</p>
+  </div>
+  {% endif %}
+</div>

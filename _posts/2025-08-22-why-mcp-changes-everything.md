@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why MCP Changes Everything: A Developer's Perspective"
-date: 2025-01-22 10:00:00 -0000
+date: 2025-08-22 10:00:00 -0000
 categories: [mcp, ai, automation]
 tags: [mcp, claude-api, automation, integration]
 author: Shaun
@@ -29,9 +29,6 @@ MCP provides a standardized way for AI assistants to interact with external syst
 Here's what makes it brilliant:
 
 ```csharp
-// Before MCP: Pages of integration code
-// Custom auth, error handling, formatting...
-
 // With MCP: Clean and declarative
 public class DatabaseServer : McpServer
 {

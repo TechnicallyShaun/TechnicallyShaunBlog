@@ -28,27 +28,73 @@ I believe in:
 
 ## Technical Stack
 
-Here are some of the technologies I work with regularly:
-
-### Languages
-- JavaScript/TypeScript
-- Python
-- Go
-- Java
-- Ruby
-
-### Frameworks & Libraries
-- React, Vue, Angular
-- Node.js, Express, FastAPI
-- Django, Flask, Rails
-- Spring Boot
-
-### Tools & Platforms
-- Docker & Kubernetes
-- AWS, Azure, GCP
-- Git & GitHub Actions
-- PostgreSQL, MongoDB, Redis
-- Terraform, Ansible
+<div class="skills-grid">
+  <div class="skill-category">
+    <h3>Languages</h3>
+    <ul>
+      <li>JavaScript/TypeScript</li>
+      <li>Python</li>
+      <li>Go</li>
+      <li>Java</li>
+      <li>Ruby</li>
+    </ul>
+  </div>
+  
+  <div class="skill-category">
+    <h3>Frontend</h3>
+    <ul>
+      <li>React</li>
+      <li>Vue</li>
+      <li>Angular</li>
+      <li>Next.js</li>
+      <li>Tailwind CSS</li>
+    </ul>
+  </div>
+  
+  <div class="skill-category">
+    <h3>Backend</h3>
+    <ul>
+      <li>Node.js</li>
+      <li>Express</li>
+      <li>FastAPI</li>
+      <li>Django</li>
+      <li>Spring Boot</li>
+    </ul>
+  </div>
+  
+  <div class="skill-category">
+    <h3>Cloud & DevOps</h3>
+    <ul>
+      <li>AWS</li>
+      <li>Docker</li>
+      <li>Kubernetes</li>
+      <li>GitHub Actions</li>
+      <li>Terraform</li>
+    </ul>
+  </div>
+  
+  <div class="skill-category">
+    <h3>Databases</h3>
+    <ul>
+      <li>PostgreSQL</li>
+      <li>MongoDB</li>
+      <li>Redis</li>
+      <li>MySQL</li>
+      <li>DynamoDB</li>
+    </ul>
+  </div>
+  
+  <div class="skill-category">
+    <h3>Tools</h3>
+    <ul>
+      <li>Git</li>
+      <li>VS Code</li>
+      <li>Postman</li>
+      <li>Jira</li>
+      <li>Figma</li>
+    </ul>
+  </div>
+</div>
 
 ## Why This Blog?
 

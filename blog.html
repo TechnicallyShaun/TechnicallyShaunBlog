@@ -1,0 +1,59 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="container">
+  <div class="content-container">
+    <header class="about-header" style="margin-bottom: 3rem;">
+      <h1>Blog</h1>
+      <p style="color: var(--text-secondary); margin: 0;">Tutorials, insights, and thoughts on technology</p>
+    </header>
+    
+    {%- if site.posts.size > 0 -%}
+    <div class="posts-grid" style="grid-template-columns: 1fr;">
+      {%- for post in paginator.posts -%}
+      <article class="post-card">
+        <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+        <h2 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        <p class="post-card-excerpt">
+          {%- if post.excerpt -%}
+            {{ post.excerpt | strip_html | truncate: 200 }}
+          {%- else -%}
+            {{ post.content | strip_html | truncate: 200 }}
+          {%- endif -%}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="post-card-link">
+          Read more →
+        </a>
+      </article>
+      {%- endfor -%}
+    </div>
+    
+    {%- if paginator.total_pages > 1 -%}
+    <nav class="pagination">
+      {%- if paginator.previous_page -%}
+        <a href="{{ paginator.previous_page_path | relative_url }}">← Previous</a>
+      {%- else -%}
+        <span style="opacity: 0.5;">← Previous</span>
+      {%- endif -%}
+      
+      <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      
+      {%- if paginator.next_page -%}
+        <a href="{{ paginator.next_page_path | relative_url }}">Next →</a>
+      {%- else -%}
+        <span style="opacity: 0.5;">Next →</span>
+      {%- endif -%}
+    </nav>
+    {%- endif -%}
+    
+    {%- else -%}
+    <p style="text-align: center; color: var(--text-secondary);">No posts yet. Check back soon!</p>
+    {%- endif -%}
+  </div>
+</div>

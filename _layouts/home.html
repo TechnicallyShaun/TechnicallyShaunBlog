@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="container">
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ content }}</p>
+  </div>
+</div>
+
+<div class="container">
+  {%- if site.posts.size > 0 -%}
+    <section class="featured-section">
+      <h2>Featured Code</h2>
+      <div class="highlight">
+        <pre><code class="language-javascript">// Welcome to Technically Shaun
+const blog = {
+  purpose: "Share knowledge",
+  topics: ["Web Dev", "Cloud", "DevOps", "Best Practices"],
+  philosophy: "Clean code, elegant solutions",
+  
+  async explore() {
+    return await Promise.all([
+      learn(),
+      build(),
+      share()
+    ]);
+  }
+};
+
+blog.explore().then(() => console.log("Let's build something amazing!"));</code></pre>
+      </div>
+    </section>
+    
+    <section>
+      <h2 style="text-align: center; margin: 3rem 0 2rem;">Recent Posts</h2>
+      <div class="posts-grid">
+        {%- for post in site.posts limit:6 -%}
+        <article class="post-card">
+          <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </time>
+          <h3 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          <p class="post-card-excerpt">
+            {%- if post.excerpt -%}
+              {{ post.excerpt | strip_html | truncate: 150 }}
+            {%- else -%}
+              {{ post.content | strip_html | truncate: 150 }}
+            {%- endif -%}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="post-card-link">
+            Read more →
+          </a>
+        </article>
+        {%- endfor -%}
+      </div>
+      
+      {%- if site.posts.size > 6 -%}
+      <div style="text-align: center; margin: 3rem 0;">
+        <a href="{{ "/blog/" | relative_url }}" class="post-card-link" style="font-size: 1.125rem;">
+          View all posts →
+        </a>
+      </div>
+      {%- endif -%}
+    </section>
+  {%- else -%}
+    <section class="featured-section">
+      <h2>Coming Soon</h2>
+      <p>Stay tuned for tutorials, insights, and practical guides on modern development practices.</p>
+    </section>
+  {%- endif -%}
+</div>

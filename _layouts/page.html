@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="container">
+  <article class="about-content">
+    {%- if page.title -%}
+    <header class="about-header">
+      <h1>{{ page.title | escape }}</h1>
+    </header>
+    {%- endif -%}
+    
+    <div class="content-container post-content">
+      {{ content }}
+    </div>
+  </article>
+</div>

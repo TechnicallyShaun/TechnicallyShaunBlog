@@ -4,7 +4,10 @@
       "*",
       "Bash(bundle exec:*)",
       "Bash(jekyll build)",
-      "WebFetch(domain:technicallyshaun.com)"
+      "WebFetch(domain:technicallyshaun.com)",
+      "Bash(gh run list:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

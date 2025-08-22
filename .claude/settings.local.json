@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "*"
+      "*",
+      "Bash(bundle exec:*)",
+      "Bash(jekyll build)",
+      "WebFetch(domain:technicallyshaun.com)"
     ],
     "deny": [],
     "ask": []

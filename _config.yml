@@ -71,9 +71,6 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-  tutorials:
-    output: true
-    permalink: /tutorials/:name/
 
 # Defaults
 defaults:

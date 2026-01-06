@@ -89,6 +89,8 @@ The goal isn't just to connect AI to your systems. It's to build truly autonomou
 
 Ready to build something real? Let's start with [setting up your first MCP server](/tutorials/first-mcp-server/).
 
+test
+
 ---
 
 *Have questions or want to share what you're building with MCP? [Drop me an email](mailto:contact@technicallyshaun.com).*

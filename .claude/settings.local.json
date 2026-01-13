@@ -7,7 +7,9 @@
       "WebFetch(domain:technicallyshaun.com)",
       "Bash(gh run list:*)",
       "WebFetch(domain:github.com)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)"
     ],
     "deny": [],
     "ask": []

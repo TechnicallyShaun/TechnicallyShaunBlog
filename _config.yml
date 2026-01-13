@@ -38,6 +38,14 @@ google_analytics: G-DHQKSG0WCF
 # disqus:
 #   shortname: technicallyshaun
 
+# Giscus Comments (uses GitHub Discussions)
+# Get your values from https://giscus.app after enabling Discussions on your repo
+giscus:
+  repo: "technicallyshaun/technicallyshaunblog"
+  repo_id: "R_kgDOPh7GhQ"
+  category: "Announcements"
+  category_id: "DIC_kwDOPh7Ghc4C062-"
+
 # Exclude from processing
 exclude:
   - Gemfile

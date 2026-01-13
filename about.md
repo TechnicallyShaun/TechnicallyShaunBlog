@@ -6,104 +6,27 @@ permalink: /about/
 
 # About
 
-I'm Shaun, a developer who's been writing code for many years. Recently, I discovered that with AI and MCP (Model Context Protocol), technology has finally reached the point where we can build genuinely autonomous personal assistants.
+I'm Shaun. I over-engineer and automate all the things (however little).
 
-## The Mission
+## The Current Obsession
 
-I'm on a mission to over-engineer and automate all the things. Why? Because I want to improve my lifestyle and save time for what actually matters. Along the way, I'm documenting what works, what doesn't, and the interesting discoveries in between.
+I'm building what I call **The Self-Driving Vault** - basically trying to get AI agents to organize my Obsidian notes so I don't have to. Everyone's got a messy vault. Everyone wants AI to fix it. I'm the guy actually attempting it and documenting the chaos.
 
-## What You'll Find Here
+The dream? A second brain that actually thinks. The reality? Mostly debugging why Claude keeps putting grocery lists in my project folders.
 
-- **MCP Implementations**: Practical guides for connecting AI to your existing systems
-- **Automation Patterns**: Real solutions that save real time
-- **Production Code**: Everything I share is battle-tested in actual use
-- **Learning in Public**: Including the failures and debugging sessions
+## What This Site Is
 
-## Current Focus Areas
+A mix of tutorials, experiments, and "well that didn't work" moments. I build things, break things, occasionally fix things, and write about all of it. Topics drift wherever my attention goes - right now that's autonomous knowledge management, AI agents, and convincing robots to do my filing.
 
-- Building comprehensive MCP servers in C#
-- Creating autonomous workflows with Claude API
-- Deploying AI systems with Docker
-- Automating daily tasks that shouldn't require human intervention
+No promises on consistency. I'm easily distracted by shiny new problems.
 
 ## The Approach
 
-Every tutorial and post comes from actual projects. I build first, then extract the learnings. No toy examples or hello-world demos – just real implementations solving real problems.
-
-## Technical Stack
-
-<div class="skills-grid">
-  <div class="skill-category">
-    <h3>Languages</h3>
-    <ul>
-      <li>JavaScript/TypeScript</li>
-      <li>Python</li>
-      <li>Go</li>
-      <li>Java</li>
-      <li>Ruby</li>
-    </ul>
-  </div>
-  
-  <div class="skill-category">
-    <h3>Frontend</h3>
-    <ul>
-      <li>React</li>
-      <li>Vue</li>
-      <li>Angular</li>
-      <li>Next.js</li>
-      <li>Tailwind CSS</li>
-    </ul>
-  </div>
-  
-  <div class="skill-category">
-    <h3>Backend</h3>
-    <ul>
-      <li>Node.js</li>
-      <li>Express</li>
-      <li>FastAPI</li>
-      <li>Django</li>
-      <li>Spring Boot</li>
-    </ul>
-  </div>
-  
-  <div class="skill-category">
-    <h3>Cloud & DevOps</h3>
-    <ul>
-      <li>AWS</li>
-      <li>Docker</li>
-      <li>Kubernetes</li>
-      <li>GitHub Actions</li>
-      <li>Terraform</li>
-    </ul>
-  </div>
-  
-  <div class="skill-category">
-    <h3>Databases</h3>
-    <ul>
-      <li>PostgreSQL</li>
-      <li>MongoDB</li>
-      <li>Redis</li>
-      <li>MySQL</li>
-      <li>DynamoDB</li>
-    </ul>
-  </div>
-  
-  <div class="skill-category">
-    <h3>Tools</h3>
-    <ul>
-      <li>Git</li>
-      <li>VS Code</li>
-      <li>Postman</li>
-      <li>Jira</li>
-      <li>Figma</li>
-    </ul>
-  </div>
-</div>
-
+Everything here comes from stuff I actually use. I build it, live in it, then extract what works. No toy examples or theoretical frameworks - just real automation solving real problems (and sometimes creating new ones).
 
 ## Connect
 
 - GitHub: [github.com/technicallyshaun](https://github.com/technicallyshaun)
 - Email: [Get in touch](mailto:contact@technicallyshaun.com)
 
-Want to follow along? Subscribe to the [RSS feed](/feed.xml) or check back weekly for new posts.
+Want to follow along? Subscribe to the [RSS feed](/feed.xml) or check back whenever.

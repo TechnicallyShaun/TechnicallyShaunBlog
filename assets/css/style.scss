@@ -248,8 +248,11 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(13, 17, 23, 0.65) 0%, rgba(22, 27, 34, 0.55) 100%);
   z-index: 1;
+}
+
+[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.65) 0%, rgba(22, 27, 34, 0.55) 100%);
 }
 
 [data-theme="light"] .hero-overlay {

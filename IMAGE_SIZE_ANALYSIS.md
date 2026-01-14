@@ -24,12 +24,23 @@ The hero section is implemented in `_layouts/home.html`:
 ```
 
 ### CSS Styling
-In `assets/css/style.scss`, the `.hero` class applies:
+In `assets/css/style.scss`, the `.hero` class includes background-related properties:
 ```css
 .hero {
+  /* Background image properties - KEY for consistent sizing */
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
+  
+  /* Layout properties */
+  padding: 8rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ```
 

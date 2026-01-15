@@ -5,30 +5,38 @@ permalink: /blog/
 ---
 
 <div class="blog-page">
-  <header class="page-header">
-    <h1>Blog</h1>
-    <p class="page-description">Real implementations, production code, and lessons learned building autonomous systems.</p>
+  <header class="page-header-wrapper">
+    <div class="container">
+      <div class="content-container">
+        <h1>Blog</h1>
+        <p class="page-description">Real implementations, production code, and lessons learned building autonomous systems.</p>
+      </div>
+    </div>
   </header>
   
-  <div class="posts-list">
-    {% for post in site.posts %}
-    <article class="post-preview">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-      {% if post.categories %}
-      <div class="categories">
-        {% for category in post.categories %}
-        <span class="category">{{ category }}</span>
+  <div class="container">
+    <div class="content-container">
+      <div class="posts-list">
+        {% for post in site.posts %}
+        <article class="post-preview">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          {% if post.categories %}
+          <div class="categories">
+            {% for category in post.categories %}
+            <span class="category">{{ category }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </article>
         {% endfor %}
       </div>
+      
+      {% if site.posts.size == 0 %}
+      <p class="no-posts">No posts yet. Check back soon!</p>
       {% endif %}
-      <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
-      <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-    </article>
-    {% endfor %}
+    </div>
   </div>
-  
-  {% if site.posts.size == 0 %}
-  <p class="no-posts">No posts yet. Check back soon!</p>
-  {% endif %}
 </div>

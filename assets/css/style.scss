@@ -21,6 +21,8 @@
   --bg-tertiary: #1c2128;
   --bg-code: #000000;
   
+  --bg-secondary-rgb: 22, 27, 34;
+  
   --text-primary: #e6edf3;
   --text-secondary: #8b949e;
   --text-heading: #f0f6fc;
@@ -42,6 +44,8 @@
   --bg-secondary: #ffffff;
   --bg-tertiary: #f6f8fa;
   --bg-code: #f6f8fa;
+  
+  --bg-secondary-rgb: 255, 255, 255;
   
   --text-primary: #24292f;
   --text-secondary: #57606a;
@@ -131,13 +135,12 @@ p {
 }
 
 header {
-  background-color: var(--bg-secondary);
+  background-color: rgba(var(--bg-secondary-rgb), 0.9);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background-color: rgba(var(--bg-secondary), 0.9);
   transition: all var(--transition-speed) ease;
 }
 
@@ -625,8 +628,25 @@ footer {
   border-color: var(--accent-primary);
 }
 
-.blog-page, .tutorials-page {
-  padding: 4rem 0;
+.blog-page {
+  width: 100%;
+}
+
+.page-header-wrapper {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+  padding: 3rem 0 2rem;
+}
+
+.page-header-wrapper .content-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.page-header-wrapper h1 {
+  margin-top: 0;
 }
 
 .page-header {
@@ -637,12 +657,11 @@ footer {
 .page-description {
   font-size: 1.25rem;
   color: var(--text-secondary);
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .posts-list {
-  max-width: var(--content-width);
-  margin: 0 auto;
+  /* Posts list is now constrained by parent content-container */
 }
 
 .post-preview {

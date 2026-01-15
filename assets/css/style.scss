@@ -419,7 +419,9 @@ blockquote {
 
 .post-header-wrapper {
   width: 100%;
-  background-color: var(--bg-secondary);
+  background-color: rgba(var(--bg-secondary-rgb), 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
   padding: 3rem 0 2rem;
@@ -634,7 +636,9 @@ footer {
 
 .page-header-wrapper {
   width: 100%;
-  background-color: var(--bg-secondary);
+  background-color: rgba(var(--bg-secondary-rgb), 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
   padding: 3rem 0 2rem;

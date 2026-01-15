@@ -141,6 +141,7 @@ header {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all var(--transition-speed) ease;
 }
 

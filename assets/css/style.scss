@@ -410,6 +410,23 @@ blockquote {
   min-height: 60vh;
 }
 
+.post-article {
+  width: 100%;
+}
+
+.post-header-wrapper {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+  padding: 3rem 0 2rem;
+}
+
+.post-header-wrapper .content-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
 .post-header {
   margin-bottom: 3rem;
   padding-bottom: 2rem;

@@ -18,7 +18,6 @@
   const SCROLL_RANGE = 200; // Pixels over which to gradually shrink
   const MIN_FONT_SIZE = 1.2; // rem
   const MIN_PADDING = { top: 1.5, bottom: 1 }; // rem
-  const THROTTLE_DELAY = 16; // ms (~60fps)
   
   // Initial values (matching CSS defaults)
   const INITIAL_FONT_SIZE = 2.5; // rem (from h1 default)
@@ -27,7 +26,6 @@
   // Cache DOM elements
   let postHeaderWrapper = null;
   let postTitle = null;
-  let lastScrollTime = 0;
   let rafId = null;
   
   /**
@@ -43,7 +41,7 @@
       return;
     }
     
-    // Add throttled scroll listener
+    // Add throttled scroll listener using requestAnimationFrame
     window.addEventListener('scroll', throttledHandleScroll, { passive: true });
     
     // Run once on init in case user refreshes mid-scroll
@@ -51,26 +49,19 @@
   }
   
   /**
-   * Throttled scroll handler to improve performance
-   * Limits execution to ~60fps
+   * Throttled scroll handler using requestAnimationFrame
+   * Ensures updates happen at most once per frame (~60fps)
    */
   function throttledHandleScroll() {
-    const now = Date.now();
-    
-    if (now - lastScrollTime < THROTTLE_DELAY) {
-      // Schedule update for next frame if not already scheduled
-      if (!rafId) {
-        rafId = requestAnimationFrame(() => {
-          rafId = null;
-          handleScroll();
-          lastScrollTime = Date.now();
-        });
-      }
+    // Only schedule one update per frame
+    if (rafId) {
       return;
     }
     
-    lastScrollTime = now;
-    handleScroll();
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      handleScroll();
+    });
   }
   
   /**
@@ -82,9 +73,9 @@
     
     // Only start shrinking after scrolling past the main header
     if (scrollY <= HEADER_HEIGHT) {
-      // Reset to initial state
-      postTitle.style.fontSize = '';
-      postHeaderWrapper.style.padding = '';
+      // Reset to initial state by removing inline styles
+      postTitle.style.fontSize = `${INITIAL_FONT_SIZE}rem`;
+      postHeaderWrapper.style.padding = `${INITIAL_PADDING.top}rem 0 ${INITIAL_PADDING.bottom}rem`;
       return;
     }
     
@@ -99,7 +90,7 @@
     const paddingTop = INITIAL_PADDING.top - (INITIAL_PADDING.top - MIN_PADDING.top) * easedProgress;
     const paddingBottom = INITIAL_PADDING.bottom - (INITIAL_PADDING.bottom - MIN_PADDING.bottom) * easedProgress;
     
-    // Apply styles
+    // Apply styles directly (simpler and sufficient for this use case)
     postTitle.style.fontSize = `${fontSize}rem`;
     postHeaderWrapper.style.padding = `${paddingTop}rem 0 ${paddingBottom}rem`;
   }

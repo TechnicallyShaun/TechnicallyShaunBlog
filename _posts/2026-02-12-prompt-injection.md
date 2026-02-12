@@ -211,17 +211,11 @@ Install at your own risk, read them fully. Better yet, make your own.
 
 ## What This Means
 
-A few takeaways from this experiment:
-
-1. **Prompt injection against modern AI agents is harder than you'd think.** The combination of untrusted content wrappers and improved model discipline makes the classic "hidden instructions in a web page" attack much less viable than it was even a year ago.
-
-2. **The trust boundary is everything.** The security doesn't come from the model being smart enough to spot injections it comes from the framework telling the model not to trust certain content in the first place. If you're building with AI agents, this boundary is the thing you need to get right.
-
-3. **Protect all your inputs, not just the web.** Web pages are the obvious vector, but emails, chat messages, documents, audio transcriptions, and search results are all potential injection surfaces. Anything that enters your AI's context from outside is a risk. Know where your trust boundary is and guard every entry point.
-
-4. **Audit your skills.** If you're using an AI agent framework, read the skill files. They're the instructions your AI follows. A malicious skill is a more realistic attack than a prompt injection hidden in a web page.
-
-5. **Don't disable the built-in security.** OpenClaw's untrusted content wrapper exists for a reason. If you're tempted to strip it out for convenience, don't.
+1. **Injection is harder than you'd think.** Untrusted content wrappers + better model discipline = classic web page attacks don't land like they used to.
+2. **The trust boundary is everything.** It's the framework telling the model what not to trust, not the model figuring it out alone.
+3. **Guard every input, not just web pages.** Emails, chat, documents, search results — all injection surfaces.
+4. **Audit your skills.** They're treated as system instructions. A malicious skill is a bigger threat than a hidden web page payload.
+5. **Don't disable built-in security.** The untrusted content wrapper exists for a reason. Leave it on.
 
 ---
 

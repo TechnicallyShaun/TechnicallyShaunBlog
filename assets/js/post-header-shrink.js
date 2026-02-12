@@ -90,9 +90,14 @@
     const paddingTop = INITIAL_PADDING.top - (INITIAL_PADDING.top - MIN_PADDING.top) * easedProgress;
     const paddingBottom = INITIAL_PADDING.bottom - (INITIAL_PADDING.bottom - MIN_PADDING.bottom) * easedProgress;
     
+    // Round to 2 decimal places to prevent sub-pixel flickering
+    const roundedFontSize = Math.round(fontSize * 100) / 100;
+    const roundedPaddingTop = Math.round(paddingTop * 100) / 100;
+    const roundedPaddingBottom = Math.round(paddingBottom * 100) / 100;
+    
     // Apply styles directly (simpler and sufficient for this use case)
-    postTitle.style.fontSize = `${fontSize}rem`;
-    postHeaderWrapper.style.padding = `${paddingTop}rem 0 ${paddingBottom}rem`;
+    postTitle.style.fontSize = `${roundedFontSize}rem`;
+    postHeaderWrapper.style.padding = `${roundedPaddingTop}rem 0 ${roundedPaddingBottom}rem`;
   }
   
   /**

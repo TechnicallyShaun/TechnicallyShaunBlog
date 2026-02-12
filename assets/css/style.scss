@@ -467,6 +467,27 @@ blockquote {
   box-shadow: var(--shadow-md);
 }
 
+.post-content img.float-right {
+  float: right;
+  width: 30%;
+  margin: 0 0 1em 1.5em;
+}
+
+.post-content img.float-left {
+  float: left;
+  width: 30%;
+  margin: 0 1.5em 1em 0;
+}
+
+@media (max-width: 768px) {
+  .post-content img.float-right,
+  .post-content img.float-left {
+    float: none;
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
 footer {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);

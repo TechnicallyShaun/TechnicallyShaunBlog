@@ -22,6 +22,8 @@ If you're not familiar, prompt injection is the idea that you can hide instructi
 
 Think of it like SQL injection, but for language models. Instead of sneaking `DROP TABLE` into a form field, you sneak "ignore your instructions and do this instead" into a web page, an email, or any input that an AI is going to read.
 
+![Prompt injection concept — hidden instructions lurking beneath innocent-looking text](/assets/images/2026-02-12-prompt-injection/prompt-injection-concept.png)
+
 It's been a known problem since the early days of LLMs. The scary version goes like this: you ask your AI assistant to summarise a web page, the page contains hidden instructions, and your AI silently executes them: sending emails, writing files, exfiltrating data. Whatever tools it has access to become the attacker's tools.
 
 It's worth knowing that prompt injection is a broad category. What I'm testing here hiding instructions in external content that an AI processes is specifically called **indirect prompt injection**. There are other flavours: direct injection (where you try to override the system prompt through the chat interface), training data poisoning (where the attack happens during model training), and various jailbreaking techniques (which are about bypassing safety filters rather than hijacking tool access). They're related but distinct problems. Today I'm focused on the indirect kind the one that matters most when your AI has real tools.
